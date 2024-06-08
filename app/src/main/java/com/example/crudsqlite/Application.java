@@ -8,7 +8,10 @@ public class Application extends android.app.Application {
     public void onCreate() {
         super.onCreate();
         // Initialize the Prefs class
+        // ROOM database
         AppDatabase.createDatabase(this);
+
+        // SQLITE database
         DatabaseHelper.newInstance(this);
     }
 }
